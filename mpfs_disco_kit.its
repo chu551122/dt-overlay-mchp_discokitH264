@@ -40,7 +40,7 @@
 			};
 			fdt_h_264_MM {
 				description = "Device Tree mpfs_h264 MM dtbo";
-				data = /incbin/("./mpfs_disco_kit/mpfs_modular_h264_pipeline.dtso.dtbo");
+				data = /incbin/("./mpfs_disco_kit/mpfs_modular_h264_pipeline.dtbo");
 				type = "flat_dt";
 				arch = "riscv";
 				compression = "none";
