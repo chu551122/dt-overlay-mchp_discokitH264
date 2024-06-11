@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 /*
- * Flattened Image Tree file for Mpfs Video Kit
+ * Flattened Image Tree file for Mpfs Disco Kit
  *
  * Copyright (C) 2022 Microchip Technology Inc. and its subsidiaries.
  * Author: shravan chippa <shravan.chippa@microchip.com>
@@ -40,7 +40,7 @@
 			};
 			fdt_h_264 {
 				description = "Device Tree mpfs_h264 dtbo";
-				data = /incbin/("./mpfs_video/mpfs_h264.dtbo");
+				data = /incbin/("./mpfs_disco_kit/mpfs_h264.dtbo");
 				type = "flat_dt";
 				arch = "riscv";
 				compression = "none";
@@ -51,7 +51,7 @@
 			};
 			/* fdt_mpfs_video_bayer {
 				description = "Device Tree mpfs video bayer dtbo";
-				data = /incbin/("./mpfs_video/mpfs_video_bayer.dtbo");
+				data = /incbin/("./mpfs_disco_kit/mpfs_video_bayer.dtbo");
 				type = "flat_dt";
 				arch = "riscv";
 				compression = "none";
@@ -72,7 +72,7 @@
 			};
 
 			base_dtb {
-				description = "Base FDT blob for MPFS Video board";
+				description = "Base FDT blob for MPFS Discokit board";
 				fdt = "base_fdt";
 			};
 
