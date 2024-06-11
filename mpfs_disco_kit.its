@@ -38,9 +38,9 @@
 					algo = "sha256";
 				};
 			};
-			fdt_h_264 {
-				description = "Device Tree mpfs_h264 dtbo";
-				data = /incbin/("./mpfs_disco_kit/mpfs_h264.dtbo");
+			fdt_h_264_MM {
+				description = "Device Tree mpfs_h264 MM dtbo";
+				data = /incbin/("./mpfs_disco_kit/mpfs_modular_h264_pipeline.dtso.dtbo");
 				type = "flat_dt";
 				arch = "riscv";
 				compression = "none";
@@ -49,17 +49,7 @@
 					algo = "sha256";
 				};
 			};
-			/* fdt_mpfs_video_bayer {
-				description = "Device Tree mpfs video bayer dtbo";
-				data = /incbin/("./mpfs_disco_kit/mpfs_video_bayer.dtbo");
-				type = "flat_dt";
-				arch = "riscv";
-				compression = "none";
-				load = <0x8a090000>;
-				hash-1 {
-					algo = "sha256";
-				};
-			};
+			
 */
 		};
 
@@ -76,14 +66,9 @@
 				fdt = "base_fdt";
 			};
 
-			h_264 {
-				description = "FDT overlay blob for H.264";
-				fdt = "fdt_h_264";
+			h_264_MM {
+				description = "FDT overlay blob for H.264 Modular Pipeline";
+				fdt = "fdt_h_264_MM";
 			};
-
-			/* mpfs_video_bayer {
-				description = "FDT overlay blob for video bayer";
-				fdt = "fdt_mpfs_video_bayer";
-			};*/
 		};
 };
