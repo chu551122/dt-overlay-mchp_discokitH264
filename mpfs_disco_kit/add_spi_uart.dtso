@@ -1,0 +1,45 @@
+/dts-v1/;
+/plugin/;
+/ {
+    compatible = "microchip,mpfs";
+
+    fragment@0 {
+        target = <&spi0>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            spidev@0 {
+                compatible = "ltc2488";
+                reg = <0>;
+                spi-max-frequency = <1000000>; /* 1 MHz */
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&spi1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            spidev@0 {
+                compatible = "ltc2488";
+                reg = <0>;
+                spi-max-frequency = <1000000>; /* 1 MHz */
+            };
+        };
+    };
+
+    fragment@2 {
+        target = <&mmuart2>;
+        __overlay__ {
+            status = "okay";
+            current-speed = <115200>; /* Set baud rate */
+            parity = "none";
+            flow-control = "none";
+        };
+    };
+};
