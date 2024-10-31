@@ -34,7 +34,7 @@
     };
 
     fragment@2 {
-        target = <&mmuart0>;
+        target = <&mmuart2>;
         __overlay__ {
             status = "okay";
             current-speed = <115200>; /* Set baud rate */
